@@ -12,7 +12,8 @@ LDLIBS = -lXaw -lXmu -lXt -lXext -lX11 -lm
 LDFLAGS = -L$(WINHOME)/lib
 CFLAGS = -g -I$(WINHOME)/include
 
-CC = gcc -traditional
+#CC = gcc -E -traditional
+CC = gcc
 I_PROGS = unravel select analyzer helpu
 S_PROGS = slice_driver auto-slice pss-driver call-tree
 PROGS = $(I_PROGS) $(S_PROGS) parser summary tsummary map u slink\
