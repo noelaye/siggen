@@ -1,4 +1,3 @@
-extern char *malloc(), *realloc();
 
 # line 2 "kgram.y"
 # include <stdio.h>
@@ -67,14 +66,59 @@ extern char *malloc(), *realloc();
 # define CONTINUE 313
 # define BREAK 314
 # define RETURN 315
+
+#include <inttypes.h>
+
+#ifdef __STDC__
+#include <stdlib.h>
+#include <string.h>
+#define	YYCONST	const
+#else
+#include <malloc.h>
+#include <memory.h>
+#define	YYCONST
+#endif
+
+#include <values.h>
+
+#if defined(__cplusplus) || defined(__STDC__)
+
+#if defined(__cplusplus) && defined(__EXTERN_C__)
+extern "C" {
+#endif
+#ifndef yyerror
+#if defined(__cplusplus)
+	void yyerror(YYCONST char *);
+#endif
+#endif
+#ifndef yylex
+	int yylex(void);
+#endif
+	int yyparse(void);
+#if defined(__cplusplus) && defined(__EXTERN_C__)
+}
+#endif
+
+#endif
+
 #define yyclearin yychar = -1
 #define yyerrok yyerrflag = 0
 extern int yychar;
 extern int yyerrflag;
+YYSTYPE yylval;
+YYSTYPE yyval;
+typedef int yytabelem;
 #ifndef YYMAXDEPTH
 #define YYMAXDEPTH 150
 #endif
-YYSTYPE yylval, yyval;
+#if YYMAXDEPTH > 0
+int yy_yys[YYMAXDEPTH], *yys = yy_yys;
+YYSTYPE yy_yyv[YYMAXDEPTH], *yyv = yy_yyv;
+#else	/* user does initial allocation */
+int *yys;
+YYSTYPE *yyv;
+#endif
+static int yymaxdepth = YYMAXDEPTH;
 # define YYERRCODE 256
 
 # line 1069 "kgram.y"
@@ -161,7 +205,7 @@ print_token(t)
 	else printf (" is null");
 	printf ("\n");
 }
-int yyexca[] ={
+static YYCONST yytabelem yyexca[] ={
 -1, 1,
 	0, -1,
 	-2, 0,
@@ -190,7 +234,7 @@ int yyexca[] ={
 	};
 # define YYNPROD 234
 # define YYLAST 1381
-int yyact[]={
+static YYCONST yytabelem yyact[]={
 
     96,    14,   311,    14,   194,   205,   333,   332,   364,    14,
    151,    14,    49,   132,   123,   131,    14,   192,   106,   138,
@@ -331,47 +375,47 @@ int yyact[]={
      0,     0,     0,     0,     0,     0,    36,    97,    99,    88,
      0,    85,    86,     0,    36,    97,    99,    88,     0,    85,
     86 };
-int yypact[]={
+static YYCONST yytabelem yypact[]={
 
-   593, -1000,   593, -1000, -1000, -1000, -1000, -1000,    27,    21,
-     1,   633,   633,   633, -1000,    57,   -22, -1000, -1000, -1000,
- -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000,
- -1000, -1000, -1000, -1000, -1000, -1000, -1000,   -55,   -63, -1000,
- -1000, -1000, -1000, -1000, -1000,    94,    54, -1000,  1027,   371,
-    21, -1000, -1000, -1000,   294,   -22, -1000, -1000, -1000,  -242,
-  -193,   -25,   104,   569, -1000,    57,  1012, -1000, -1000,    16,
- -1000,   -48,  -257,   -39,     6,   376,  -241,   -41,  -235,   143,
-   153, -1000, -1000,   505,   105,  1117,  1117,  1035,  1109, -1000,
- -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000,  -237, -1000,
-   460, -1000, -1000, -1000,   -29,   811, -1000,   730, -1000, -1000,
-    43, -1000,    55,  -193, -1000, -1000, -1000,   633,   367, -1000,
-    27, -1000,    54, -1000, -1000,  1012, -1000,   -28,   569, -1000,
+   593,-10000000,   593,-10000000,-10000000,-10000000,-10000000,-10000000,    27,    21,
+     1,   633,   633,   633,-10000000,    57,   -22,-10000000,-10000000,-10000000,
+-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,
+-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,   -55,   -63,-10000000,
+-10000000,-10000000,-10000000,-10000000,-10000000,    94,    54,-10000000,  1027,   371,
+    21,-10000000,-10000000,-10000000,   294,   -22,-10000000,-10000000,-10000000,  -242,
+  -193,   -25,   104,   569,-10000000,    57,  1012,-10000000,-10000000,    16,
+-10000000,   -48,  -257,   -39,     6,   376,  -241,   -41,  -235,   143,
+   153,-10000000,-10000000,   505,   105,  1117,  1117,  1035,  1109,-10000000,
+-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,  -237,-10000000,
+   460,-10000000,-10000000,-10000000,   -29,   811,-10000000,   730,-10000000,-10000000,
+    43,-10000000,    55,  -193,-10000000,-10000000,-10000000,   633,   367,-10000000,
+    27,-10000000,    54,-10000000,-10000000,  1012,-10000000,   -28,   569,-10000000,
   1035,  1035,  1035,  1035,  1035,  1035,  1035,  1035,  1035,  1035,
   1035,  1035,  1035,  1035,  1035,  1035,  1035,  1035,  1035,   292,
-   290, -1000,   132,   678,  1035,   966,  -193,  -193, -1000, -1000,
- -1000,  1035, -1000, -1000, -1000,   505, -1000, -1000,   288,   284,
-   188,   178, -1000, -1000,    51,  -242, -1000, -1000, -1000, -1000,
-    91, -1000, -1000,   115,  1035, -1000,  -193,  1035,    34, -1000,
-   -31, -1000,   198,   633, -1000, -1000, -1000, -1000, -1000, -1000,
- -1000,   111,  1035,   107, -1000,    89,   368,   364,   330,   426,
-   321,  -193,    95,    93,  1004, -1000,    30, -1000,  1035, -1000,
- -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000,
- -1000,  -257,   112,   -39,     6,   376,  -241,   -41,   -41,  -235,
-  -235,  -235,  -235,   143,   143,   153,   153, -1000, -1000, -1000,
- -1000,  1035,  1035, -1000,    71,    19,   541,   958,    14, -1000,
-   277, -1000, -1000, -1000,   276, -1000, -1000,   414,  -193, -1000,
- -1000,    -3,   322,   653, -1000,    23,  1035, -1000, -1000, -1000,
- -1000, -1000, -1000, -1000,   139,   633,   426,   106,   426, -1000,
-  1035,  1035,  1035,  -302,  1035,    90, -1000, -1000, -1000,    84,
- -1000,   523, -1000,  1035, -1000, -1000,    19,   950,   313,   262,
- -1000,   245, -1000,    11, -1000, -1000,   136, -1000, -1000, -1000,
- -1000, -1000, -1000, -1000, -1000,    80, -1000,   426, -1000,   339,
-   337,   335,   301,    85,   132, -1000, -1000, -1000, -1000, -1000,
- -1000,     2,   613, -1000, -1000, -1000,  1035, -1000, -1000,   426,
-   426,   426,  1035,  1035, -1000, -1000,   241, -1000,  -299, -1000,
- -1000,   160,    72, -1000,   426,    67,  1035, -1000, -1000,   218,
-   426, -1000 };
-int yypgo[]={
+   290,-10000000,   132,   678,  1035,   966,  -193,  -193,-10000000,-10000000,
+-10000000,  1035,-10000000,-10000000,-10000000,   505,-10000000,-10000000,   288,   284,
+   188,   178,-10000000,-10000000,    51,  -242,-10000000,-10000000,-10000000,-10000000,
+    91,-10000000,-10000000,   115,  1035,-10000000,  -193,  1035,    34,-10000000,
+   -31,-10000000,   198,   633,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,
+-10000000,   111,  1035,   107,-10000000,    89,   368,   364,   330,   426,
+   321,  -193,    95,    93,  1004,-10000000,    30,-10000000,  1035,-10000000,
+-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,-10000000,
+-10000000,  -257,   112,   -39,     6,   376,  -241,   -41,   -41,  -235,
+  -235,  -235,  -235,   143,   143,   153,   153,-10000000,-10000000,-10000000,
+-10000000,  1035,  1035,-10000000,    71,    19,   541,   958,    14,-10000000,
+   277,-10000000,-10000000,-10000000,   276,-10000000,-10000000,   414,  -193,-10000000,
+-10000000,    -3,   322,   653,-10000000,    23,  1035,-10000000,-10000000,-10000000,
+-10000000,-10000000,-10000000,-10000000,   139,   633,   426,   106,   426,-10000000,
+  1035,  1035,  1035,  -302,  1035,    90,-10000000,-10000000,-10000000,    84,
+-10000000,   523,-10000000,  1035,-10000000,-10000000,    19,   950,   313,   262,
+-10000000,   245,-10000000,    11,-10000000,-10000000,   136,-10000000,-10000000,-10000000,
+-10000000,-10000000,-10000000,-10000000,-10000000,    80,-10000000,   426,-10000000,   339,
+   337,   335,   301,    85,   132,-10000000,-10000000,-10000000,-10000000,-10000000,
+-10000000,     2,   613,-10000000,-10000000,-10000000,  1035,-10000000,-10000000,   426,
+   426,   426,  1035,  1035,-10000000,-10000000,   241,-10000000,  -299,-10000000,
+-10000000,   160,    72,-10000000,   426,    67,  1035,-10000000,-10000000,   218,
+   426,-10000000 };
+static YYCONST yytabelem yypgo[]={
 
      0,   487,   483,   482,   387,   481,   130,    82,   127,   207,
     71,    75,    84,    96,    83,   102,   480,   937,    10,   479,
@@ -382,7 +426,7 @@ int yypgo[]={
    435,   433,   431,   105,   430,   429,   417,   428,   147,     0,
    427,    90,   129,   425,   424,   423,    12,   422,   421,   416,
    415 };
-int yyr1[]={
+static YYCONST yytabelem yyr1[]={
 
      0,     1,     1,     1,     1,    70,    70,     2,     2,     2,
      2,     2,     2,     2,     2,     3,     3,    74,     4,     4,
@@ -408,7 +452,7 @@ int yyr1[]={
     61,    62,    62,    62,    62,    62,    64,    64,    65,    65,
     66,    66,    66,    68,    77,    67,    78,    67,    79,    67,
     63,    80,    63,    69 };
-int yyr2[]={
+static YYCONST yytabelem yyr2[]={
 
      0,     3,     3,     3,     7,     2,     4,     2,     9,     7,
      9,     7,     7,     5,     5,     2,     9,     1,     2,     5,
@@ -434,9 +478,9 @@ int yyr2[]={
     19,     7,     5,     5,     5,     7,     1,     3,     2,     4,
      2,     2,     2,     1,     1,     8,     1,     9,     1,    11,
      3,     1,     7,     2 };
-int yychk[]={
+static YYCONST yytabelem yychk[]={
 
- -1000,   -64,   -65,   -66,   -67,   -24,    59,   -39,   -25,   -40,
+-10000000,   -64,   -65,   -66,   -67,   -24,    59,   -39,   -25,   -40,
    -41,   -28,   -72,   -29,   -69,    40,    42,   283,   284,   285,
    286,   287,   296,   297,   288,   289,   290,   291,   292,   293,
    294,   295,   298,   -30,   -36,   282,   257,   -31,   301,   299,
@@ -474,7 +518,7 @@ int yychk[]={
     41,    41,    40,    59,    93,    41,   -44,   -18,   -52,   -52,
    -52,   -21,   -20,    41,   307,    41,    59,   -52,    59,   -20,
     41,   -52 };
-int yydef[]={
+static YYCONST yytabelem yydef[]={
 
    216,    -2,   217,   218,   220,   221,   222,    -2,     0,    -2,
      0,    81,    83,    85,   138,     0,   145,    91,    92,    93,
@@ -514,9 +558,17 @@ int yydef[]={
      0,     0,     0,   206,   172,   175,     0,    16,   203,   205,
    208,     0,     0,   176,     0,     0,   206,   204,   209,     0,
      0,   210 };
-typedef struct { char *t_name; int t_val; } yytoktype;
+typedef struct
+#ifdef __cplusplus
+	yytoktype
+#endif
+{
+#ifdef __cplusplus
+const
+#endif
+char *t_name; int t_val; } yytoktype;
 #ifndef YYDEBUG
-#	define YYDEBUG	1	/* allow debugging */
+#	define YYDEBUG	0	/* don't allow debugging */
 #endif
 
 #if YYDEBUG
@@ -597,6 +649,9 @@ yytoktype yytoks[] =
 	"-unknown-",	-1	/* ends search */
 };
 
+#ifdef __cplusplus
+const
+#endif
 char * yyreds[] =
 {
 	"-no such reduction-",
@@ -835,8 +890,12 @@ char * yyreds[] =
 	"identifier : IDENTIFIER",
 };
 #endif /* YYDEBUG */
-#line 1 "/usr/lib/yaccpar"
-/*	@(#)yaccpar 1.10 89/04/04 SMI; from S5R3 1.10	*/
+# line	1 "/usr/ccs/bin/yaccpar"
+/*
+ * Copyright (c) 1993 by Sun Microsystems, Inc.
+ */
+
+#pragma ident	"@(#)yaccpar	6.16	99/01/20 SMI"
 
 /*
 ** Skeleton parser driver for yacc output
@@ -846,8 +905,8 @@ char * yyreds[] =
 ** yacc user known macros and defines
 */
 #define YYERROR		goto yyerrlab
-#define YYACCEPT	{ free(yys); free(yyv); return(0); }
-#define YYABORT		{ free(yys); free(yyv); return(1); }
+#define YYACCEPT	return(0)
+#define YYABORT		return(1)
 #define YYBACKUP( newtoken, newvalue )\
 {\
 	if ( yychar >= 0 || ( yyr2[ yytmp ] >> 1 ) != 1 )\
@@ -861,6 +920,11 @@ char * yyreds[] =
 	goto yynewstate;\
 }
 #define YYRECOVERING()	(!!yyerrflag)
+#define YYNEW(type)	malloc(sizeof(type) * yynewmax)
+#define YYCOPY(to, from, type) \
+	(type *) memcpy(to, (char *) from, yymaxdepth * sizeof (type))
+#define YYENLARGE( from, type) \
+	(type *) realloc((char *) from, yynewmax * sizeof(type))
 #ifndef YYDEBUG
 #	define YYDEBUG	1	/* make debugging available */
 #endif
@@ -873,45 +937,93 @@ int yydebug;			/* set to 1 to get debugging */
 /*
 ** driver internal defines
 */
-#define YYFLAG		(-1000)
+#define YYFLAG		(-10000000)
 
 /*
-** static variables used by the parser
+** global variables used by the parser
 */
-static YYSTYPE *yyv;			/* value stack */
-static int *yys;			/* state stack */
+YYSTYPE *yypv;			/* top of value stack */
+int *yyps;			/* top of state stack */
 
-static YYSTYPE *yypv;			/* top of value stack */
-static int *yyps;			/* top of state stack */
-
-static int yystate;			/* current state */
-static int yytmp;			/* extra var (lasts between blocks) */
+int yystate;			/* current state */
+int yytmp;			/* extra var (lasts between blocks) */
 
 int yynerrs;			/* number of errors */
-
 int yyerrflag;			/* error recovery flag */
 int yychar;			/* current input token number */
 
 
+
+#ifdef YYNMBCHARS
+#define YYLEX()		yycvtok(yylex())
+/*
+** yycvtok - return a token if i is a wchar_t value that exceeds 255.
+**	If i<255, i itself is the token.  If i>255 but the neither 
+**	of the 30th or 31st bit is on, i is already a token.
+*/
+#if defined(__STDC__) || defined(__cplusplus)
+int yycvtok(int i)
+#else
+int yycvtok(i) int i;
+#endif
+{
+	int first = 0;
+	int last = YYNMBCHARS - 1;
+	int mid;
+	wchar_t j;
+
+	if(i&0x60000000){/*Must convert to a token. */
+		if( yymbchars[last].character < i ){
+			return i;/*Giving up*/
+		}
+		while ((last>=first)&&(first>=0)) {/*Binary search loop*/
+			mid = (first+last)/2;
+			j = yymbchars[mid].character;
+			if( j==i ){/*Found*/ 
+				return yymbchars[mid].tvalue;
+			}else if( j<i ){
+				first = mid + 1;
+			}else{
+				last = mid -1;
+			}
+		}
+		/*No entry in the table.*/
+		return i;/* Giving up.*/
+	}else{/* i is already a token. */
+		return i;
+	}
+}
+#else/*!YYNMBCHARS*/
+#define YYLEX()		yylex()
+#endif/*!YYNMBCHARS*/
+
 /*
 ** yyparse - return 0 if worked, 1 if syntax error not recovered from
 */
-int
-yyparse()
+#if defined(__STDC__) || defined(__cplusplus)
+int yyparse(void)
+#else
+int yyparse()
+#endif
 {
-	register YYSTYPE *yypvt;	/* top of value stack for $vars */
-	unsigned yymaxdepth = YYMAXDEPTH;
+	register YYSTYPE *yypvt = 0;	/* top of value stack for $vars */
+
+#if defined(__cplusplus) || defined(lint)
+/*
+	hacks to please C++ and lint - goto's inside
+	switch should never be executed
+*/
+	static int __yaccpar_lint_hack__ = 0;
+	switch (__yaccpar_lint_hack__)
+	{
+		case 1: goto yyerrlab;
+		case 2: goto yynewstate;
+	}
+#endif
 
 	/*
 	** Initialize externals - yyparse may be called more than once
 	*/
-	yyv = (YYSTYPE*)malloc(yymaxdepth*sizeof(YYSTYPE));
-	yys = (int*)malloc(yymaxdepth*sizeof(int));
-	if (!yyv || !yys)
-	{
-		yyerror( "out of memory" );
-		return(1);
-	}
 	yypv = &yyv[-1];
 	yyps = &yys[-1];
 	yystate = 0;
@@ -920,12 +1032,23 @@ yyparse()
 	yyerrflag = 0;
 	yychar = -1;
 
-	goto yystack;
+#if YYMAXDEPTH <= 0
+	if (yymaxdepth <= 0)
+	{
+		if ((yymaxdepth = YYEXPAND(0)) <= 0)
+		{
+			yyerror("yacc initialization error");
+			YYABORT;
+		}
+	}
+#endif
+
 	{
 		register YYSTYPE *yy_pv;	/* top of value stack */
 		register int *yy_ps;		/* top of state stack */
 		register int yy_state;		/* current state */
 		register int  yy_n;		/* internal state number info */
+	goto yystack;	/* moved from 6 lines above to here to please C++ */
 
 		/*
 		** get globals into registers.
@@ -964,11 +1087,11 @@ yyparse()
 		{
 			register int yy_i;
 
-			(void)printf( "State %d, token ", yy_state );
+			printf( "State %d, token ", yy_state );
 			if ( yychar == 0 )
-				(void)printf( "end-of-file\n" );
+				printf( "end-of-file\n" );
 			else if ( yychar < 0 )
-				(void)printf( "-none-\n" );
+				printf( "-none-\n" );
 			else
 			{
 				for ( yy_i = 0; yytoks[yy_i].t_val >= 0;
@@ -977,7 +1100,7 @@ yyparse()
 					if ( yytoks[yy_i].t_val == yychar )
 						break;
 				}
-				(void)printf( "%s\n", yytoks[yy_i].t_name );
+				printf( "%s\n", yytoks[yy_i].t_name );
 			}
 		}
 #endif /* YYDEBUG */
@@ -987,19 +1110,41 @@ yyparse()
 			** reallocate and recover.  Note that pointers
 			** have to be reset, or bad things will happen
 			*/
-			int yyps_index = (yy_ps - yys);
-			int yypv_index = (yy_pv - yyv);
-			int yypvt_index = (yypvt - yyv);
-			yymaxdepth += YYMAXDEPTH;
-			yyv = (YYSTYPE*)realloc((char*)yyv,
-				yymaxdepth * sizeof(YYSTYPE));
-			yys = (int*)realloc((char*)yys,
-				yymaxdepth * sizeof(int));
-			if (!yyv || !yys)
+			long yyps_index = (yy_ps - yys);
+			long yypv_index = (yy_pv - yyv);
+			long yypvt_index = (yypvt - yyv);
+			int yynewmax;
+#ifdef YYEXPAND
+			yynewmax = YYEXPAND(yymaxdepth);
+#else
+			yynewmax = 2 * yymaxdepth;	/* double table size */
+			if (yymaxdepth == YYMAXDEPTH)	/* first time growth */
+			{
+				char *newyys = (char *)YYNEW(int);
+				char *newyyv = (char *)YYNEW(YYSTYPE);
+				if (newyys != 0 && newyyv != 0)
+				{
+					yys = YYCOPY(newyys, yys, int);
+					yyv = YYCOPY(newyyv, yyv, YYSTYPE);
+				}
+				else
+					yynewmax = 0;	/* failed */
+			}
+			else				/* not first time */
+			{
+				yys = YYENLARGE(yys, int);
+				yyv = YYENLARGE(yyv, YYSTYPE);
+				if (yys == 0 || yyv == 0)
+					yynewmax = 0;	/* failed */
+			}
+#endif
+			if (yynewmax <= yymaxdepth)	/* tables not expanded */
 			{
 				yyerror( "yacc stack overflow" );
-				return(1);
+				YYABORT;
 			}
+			yymaxdepth = yynewmax;
+
 			yy_ps = yys + yyps_index;
 			yy_pv = yyv + yypv_index;
 			yypvt = yyv + yypvt_index;
@@ -1019,18 +1164,18 @@ yyparse()
 		*/
 		yytmp = yychar < 0;
 #endif
-		if ( ( yychar < 0 ) && ( ( yychar = yylex() ) < 0 ) )
+		if ( ( yychar < 0 ) && ( ( yychar = YYLEX() ) < 0 ) )
 			yychar = 0;		/* reached EOF */
 #if YYDEBUG
 		if ( yydebug && yytmp )
 		{
 			register int yy_i;
 
-			(void)printf( "Received token " );
+			printf( "Received token " );
 			if ( yychar == 0 )
-				(void)printf( "end-of-file\n" );
+				printf( "end-of-file\n" );
 			else if ( yychar < 0 )
-				(void)printf( "-none-\n" );
+				printf( "-none-\n" );
 			else
 			{
 				for ( yy_i = 0; yytoks[yy_i].t_val >= 0;
@@ -1039,7 +1184,7 @@ yyparse()
 					if ( yytoks[yy_i].t_val == yychar )
 						break;
 				}
-				(void)printf( "%s\n", yytoks[yy_i].t_name );
+				printf( "%s\n", yytoks[yy_i].t_name );
 			}
 		}
 #endif /* YYDEBUG */
@@ -1061,18 +1206,18 @@ yyparse()
 #if YYDEBUG
 			yytmp = yychar < 0;
 #endif
-			if ( ( yychar < 0 ) && ( ( yychar = yylex() ) < 0 ) )
+			if ( ( yychar < 0 ) && ( ( yychar = YYLEX() ) < 0 ) )
 				yychar = 0;		/* reached EOF */
 #if YYDEBUG
 			if ( yydebug && yytmp )
 			{
 				register int yy_i;
 
-				(void)printf( "Received token " );
+				printf( "Received token " );
 				if ( yychar == 0 )
-					(void)printf( "end-of-file\n" );
+					printf( "end-of-file\n" );
 				else if ( yychar < 0 )
-					(void)printf( "-none-\n" );
+					printf( "-none-\n" );
 				else
 				{
 					for ( yy_i = 0;
@@ -1085,7 +1230,7 @@ yyparse()
 							break;
 						}
 					}
-					(void)printf( "%s\n", yytoks[yy_i].t_name );
+					printf( "%s\n", yytoks[yy_i].t_name );
 				}
 			}
 #endif /* YYDEBUG */
@@ -1093,7 +1238,7 @@ yyparse()
 			** look through exception table
 			*/
 			{
-				register int *yyxi = yyexca;
+				register YYCONST int *yyxi = yyexca;
 
 				while ( ( *yyxi != -1 ) ||
 					( yyxi[1] != yy_state ) )
@@ -1127,8 +1272,9 @@ yyparse()
 				yy_pv = yypv;
 				yy_ps = yyps;
 				yy_state = yystate;
-				yynerrs++;
 			skip_init:
+				yynerrs++;
+				/* FALLTHRU */
 			case 1:
 			case 2:		/* incompletely recovered error */
 					/* try again... */
@@ -1155,7 +1301,7 @@ yyparse()
 #if YYDEBUG
 #	define _POP_ "Error recovery pops state %d, uncovers state %d\n"
 					if ( yydebug )
-						(void)printf( _POP_, *yy_ps,
+						printf( _POP_, *yy_ps,
 							yy_ps[-1] );
 #	undef _POP_
 #endif
@@ -1180,11 +1326,11 @@ yyparse()
 				{
 					register int yy_i;
 
-					(void)printf( "Error recovery discards " );
+					printf( "Error recovery discards " );
 					if ( yychar == 0 )
-						(void)printf( "token end-of-file\n" );
+						printf( "token end-of-file\n" );
 					else if ( yychar < 0 )
-						(void)printf( "token -none-\n" );
+						printf( "token -none-\n" );
 					else
 					{
 						for ( yy_i = 0;
@@ -1197,7 +1343,7 @@ yyparse()
 								break;
 							}
 						}
-						(void)printf( "token %s\n",
+						printf( "token %s\n",
 							yytoks[yy_i].t_name );
 					}
 				}
@@ -1219,7 +1365,7 @@ yyparse()
 		** to be done.
 		*/
 		if ( yydebug )
-			(void)printf( "Reduce by (%d) \"%s\"\n",
+			printf( "Reduce by (%d) \"%s\"\n",
 				yy_n, yyreds[ yy_n ] );
 #endif
 		yytmp = yy_n;			/* value to switch over */
@@ -2109,6 +2255,8 @@ case 231:
 case 232:
 # line 1059 "kgram.y"
 {yyval.stmt = yypvt[-0].stmt;} break;
+# line	531 "/usr/ccs/bin/yaccpar"
 	}
 	goto yystack;		/* reset registers in driver code */
 }
+

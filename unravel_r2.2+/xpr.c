@@ -11,6 +11,9 @@ addr_tab_ptr	addr_tab = NULL;
 int		n_malloc = 0;
 char	*malloc_funs[MAX_MALLOC];
 
+// prototypes
+static print_trees(tree_ptr t);
+
 int current_addr(){ return max_addr;}
 
 int is_malloc(name)
