@@ -21,7 +21,7 @@
 # define WAIT 500
 
 	static  char    sccsid[] = "@(#)select.c	1.6  8/16/95";
-//char *sys_errlist[];
+char *sys_errlist[];
 	int	no_slice = 0;
 int sys_nerr;
 //char **sys_errlist;

@@ -1,3 +1,3 @@
-# define HOME "/home/epsilon/Desktop/new_unravel"
+# define HOME "/user/a/aye2aung/siggen/new_unravel"
 # include "fix.h"
-# define CC  "/usr/bin/gcc"
+# define CC  "/usr/local/gcc-4.5/bin/gcc"

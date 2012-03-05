@@ -9,6 +9,11 @@ LDLIBS = -lXaw -lXmu -lXt -lXext -lX11 -lm
 # line below for LDLIBS
 LDLIBS = -lXaw -lXmu -lXt -lXext -lX11 -lm -ldl
 
+#UNAME = $(shell uname)
+#ifeq ($(UNAME), SunOS)
+WINHOME = /usr/openwin
+#endif
+
 LDFLAGS = -L$(WINHOME)/lib
 CFLAGS = -g -I$(WINHOME)/include
 

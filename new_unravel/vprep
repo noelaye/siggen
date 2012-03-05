@@ -19,7 +19,7 @@
 #                                                               *
 #                                                               *
 #****************************************************************
-set path = (/home/epsilon/Desktop/new_unravel $path)
+set path = (/user/a/aye2aung/siggen/new_unravel $path)
 foreach v ($argv)
 #	cat $v:r.LIF | grep "^16" |\
 #		sed -e "s/16(//" -e "s/,/ /" -e 's/).*$//' | vsort >& $v:r.V
