@@ -1,0 +1,45 @@
+analyzer:       ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+analyzer.o:     ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+auto-slice:     ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+auto-slice.o:   ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+call-tree:      ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+call-tree.o:    ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+chain.o:        ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+const.o:        ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+control.o:      ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+err.o:          ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+helpu:          ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+helpu.o:        ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+history.o:      ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+kgram.o:        ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+kscan.o:        ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+map:            ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+mem_alloc.o:    ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+MultiSlice.o:   ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+parser:         ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+parser.o:       ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+pss-driver:     ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+pss-driver.o:   ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+pss.o:          ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+select:         ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+select.o:       ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+sets.o:         ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+slice_driver:   ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+slice_driver.o: ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+slice-load.o:   ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+slice.o:        ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+slink:          ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+slink.o:        ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+stmt.o:         ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+summary:        ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+sym_tab.o:      ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+tsummary:       ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+u:              ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+unravel:        ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+unravel.o:      ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+u.o:            ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+visit-ctrl:     ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+visit-filter:   ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+visit-post:     ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+vsort:          ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+xpr.o:          ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped

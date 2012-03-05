@@ -1,0 +1,76 @@
+In function read_k_file:
+ k_file_name = ascii_mydoom.K
+AcceptEx
+StartAddress
+	GetTickCount
+	sub_7E1A17BA
+		closesocket
+		send
+		recv
+		sub_7E1A1664
+			gethostbyname
+			inet_addr
+			recv
+		connect
+		sub_7E1A16D3
+			send
+			recv
+		socket
+		sub_7E1A14D0
+			DeleteFileA
+			closesocket
+			CreateProcessA
+			CloseHandle
+			WaitForSingleObject
+			sub_7E1A1CD0
+				memset
+			WriteFile
+			recv
+			CreateFileA
+			GetTempFileNameA
+			GetTempPathA
+			ntohl
+	accept
+sub_7E1A1C44
+	sub_7E1A1B52
+		bind
+		closesocket
+		GetTickCount
+		sub_7E1A1ADA
+			sub_7E1A1A73
+				RegCreateKeyExA
+				RegOpenKeyExA
+				RegCloseKey
+				RegSetValueExA
+			sub_7E1A19FC
+				sub_7E1A1981
+					sub_7E1A195F
+					memcpy
+			GetModuleFileNameA
+			sub_7E1A1CD0
+				memset
+		CreateThread
+		socket
+	sub_7E1A1ADA
+		sub_7E1A1A73
+			RegCreateKeyExA
+			RegOpenKeyExA
+			RegCloseKey
+			RegSetValueExA
+		sub_7E1A19FC
+			sub_7E1A1981
+				sub_7E1A195F
+				memcpy
+		GetModuleFileNameA
+		sub_7E1A1CD0
+			memset
+	sub_7E1A1A1F
+		GetProcAddress
+		LoadLibraryA
+		GetModuleHandleA
+		sub_7E1A19FC
+			sub_7E1A1981
+				sub_7E1A195F
+				memcpy
+main
+	CreateThread

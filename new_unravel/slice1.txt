@@ -1,0 +1,1 @@
+example.c 2 func1'a 

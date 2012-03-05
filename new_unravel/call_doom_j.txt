@@ -1,0 +1,471 @@
+In function read_k_file:
+ k_file_name = mydoom_j.K
+URLDownloadToFileA
+ShellExecuteA
+fopen
+fgets
+strstr
+fclose
+sub_401230
+	memcpy
+	memset
+sub_401320
+	memset
+sub_4013A0
+	GetTimeZoneInformation
+	GetLocalTime
+	FileTimeToSystemTime
+	FileTimeToLocalFileTime
+	memset
+sub_401700
+	GetTickCount
+	memset
+sub_401750
+sub_4017B0
+	memset
+sub_401810
+sub_401960
+sub_401AD0
+	tolower
+	memset
+sub_401B80
+sub_401C20
+	memcpy
+	lstrlenA
+	WideCharToMultiByte
+	memset
+sub_401FB0
+	memcpy
+	lstrlenA
+	memset
+sub_402350
+	LoadLibraryA
+	GetProcAddress
+	GetModuleHandleA
+	memset
+sub_402470
+	lstrlenA
+	memset
+sub_402500
+	sub_402750
+		sub_4028B0
+			lstrlenA
+			tolower
+			memset
+		sub_403590
+			tolower
+			memset
+		sub_403740
+			lstrcmpA
+			tolower
+			memset
+		lstrlenA
+		sub_402FA0
+			lstrlenA
+			sub_4033B0
+				lstrcpyA
+				memset
+			memset
+		memset
+	lstrcpyA
+	GetTickCount
+	memset
+	HeapAlloc
+	GetProcessHeap
+	lstrlenA
+	lstrcmpiA
+sub_4039C0
+	lstrcatA
+	lstrcpyA
+	lstrcpynA
+	memset
+sub_403BD0
+	lstrcmpiA
+	memset
+sub_403C60
+	GetTickCount
+	lstrcpynA
+	memset
+	HeapAlloc
+	GetProcessHeap
+sub_403E90
+	GetTickCount
+	memset
+sub_403F90
+	GlobalFree
+	lstrcpynA
+	memset
+sub_404100
+	HeapFree
+	GetProcessHeap
+	GetTickCount
+	memset
+sub_404220
+	Sleep
+	GetTickCount
+	CloseHandle
+	CreateThread
+	memset
+StartAddress
+	ExitThread
+	InterlockedDecrement
+	InterlockedIncrement
+	memset
+sub_4045E0
+sub_404630
+	memset
+sub_404690
+	sub_404FE0
+		lstrcatA
+		lstrcpyA
+		GetModuleFileNameA
+		GetTempFileNameA
+		GetTempPathA
+		DeleteFileA
+		CloseHandle
+		GetFileSize
+		CreateFileA
+		memset
+	sub_4058E0
+		sub_405D90
+			memset
+			sub_406120
+				memcpy
+				memset
+			CloseHandle
+			ReadFile
+			CreateFileA
+		lstrlenA
+		lstrcatA
+		sub_405AA0
+			lstrcpyA
+			memset
+		memset
+	sub_405610
+		lstrcatA
+		lstrlenA
+		memset
+	GlobalFree
+	DeleteFileA
+	GlobalAlloc
+	sub_404DA0
+		memset
+	sub_404A90
+		memset
+	sub_4048A0
+		lstrcpyA
+		memset
+	memset
+	lstrlenA
+sub_4061F0
+	sub_406460
+		memset
+	memset
+sub_4064B0
+	CloseHandle
+	sub_406630
+		memcpy
+		memset
+	ReadFile
+	CreateFileA
+	memset
+sub_4068B0
+	sub_406AC0
+		sub_406E10
+			sub_407130
+				CloseHandle
+				UnmapViewOfFile
+				sub_406460
+					memset
+				memset
+				MapViewOfFile
+				CreateFileMappingA
+				GetFileSize
+				CreateFileA
+			Sleep
+			lstrcmpA
+			CharLowerA
+			lstrcpynA
+			memset
+		sub_406AC0
+		Sleep
+		lstrcatA
+		lstrlenA
+		lstrcpyA
+		FindClose
+		FindFirstFileA
+		FindNextFileA
+		memset
+	lstrcatA
+	lstrlenA
+	GetWindowsDirectoryA
+	GetEnvironmentVariableA
+	memset
+sub_4073E0
+	sub_406AC0
+		sub_406E10
+			sub_407130
+				CloseHandle
+				UnmapViewOfFile
+				sub_406460
+					memset
+				memset
+				MapViewOfFile
+				CreateFileMappingA
+				GetFileSize
+				CreateFileA
+			Sleep
+			lstrcmpA
+			CharLowerA
+			lstrcpynA
+			memset
+		sub_406AC0
+		Sleep
+		lstrcatA
+		lstrlenA
+		lstrcpyA
+		FindClose
+		FindFirstFileA
+		FindNextFileA
+		memset
+	Sleep
+	GetDriveTypeA
+	lstrcpyA
+	GetSystemDirectoryA
+	memset
+sub_407560
+sub_4075A0
+sub_4075D0
+	Sleep
+	SetThreadPriority
+	GetCurrentThread
+	sub_407650
+		sub_407130
+			CloseHandle
+			UnmapViewOfFile
+			sub_406460
+				memset
+			memset
+			MapViewOfFile
+			CreateFileMappingA
+			GetFileSize
+			CreateFileA
+		RegCloseKey
+		RegQueryValueExA
+		memset
+		RegOpenKeyExA
+	memset
+sub_407760
+	WriteFile
+	memset
+sub_4078F0
+	LoadLibraryA
+	lstrcpyA
+	GetFileAttributesA
+	CloseHandle
+	CreateFileA
+	lstrcatA
+	lstrlenA
+	GetSystemDirectoryA
+	GetTempPathA
+	memset
+sub_407BB0
+	RegCloseKey
+	RegCreateKeyExA
+	RegOpenKeyExA
+	memset
+sub_407D20
+	GetLastError
+	CreateMutexA
+	memset
+sub_407DB0
+	lstrcpyA
+	GetFileAttributesA
+	CopyFileA
+	DeleteFileA
+	CloseHandle
+	CreateFileA
+	SetFileAttributesA
+	lstrcatA
+	lstrlenA
+	GetSystemDirectoryA
+	GetTempPathA
+	GetModuleFileNameA
+	memset
+sub_4080B0
+	RegOpenKeyExA
+	RegCloseKey
+	RegSetValueExA
+	lstrlenA
+	memset
+sub_408200
+	RegOpenKeyExA
+	RegCloseKey
+	RegDeleteValueA
+	memset
+sub_4083F0
+	memset
+sub_408580
+	ExitThread
+	DeleteFileA
+	CloseHandle
+	memset
+	WriteFile
+	CreateFileA
+	lstrcatA
+	lstrlenA
+	GetTempPathA
+sub_408980
+	CreateThread
+	GetTickCount
+	memset
+main
+	ExitProcess
+	memset
+sub_408BF0
+	closesocket
+	Sleep
+	send
+	lstrlenA
+	connect
+	socket
+	memset
+	gethostbyname
+sub_408FA0
+	Sleep
+	sub_409040
+		HeapFree
+		GetProcessHeap
+		closesocket
+		sub_4096D0
+			sendto
+			sub_409950
+			GetTickCount
+			memset
+		sub_409C40
+			HeapFree
+			GetProcessHeap
+			memset
+		sub_409A70
+			memset
+		memset
+		HeapAlloc
+		sub_409CC0
+			memcpy
+			memset
+			HeapAlloc
+			GetProcessHeap
+			sub_409A70
+				memset
+			sub_40A040
+				memset
+		recv
+		socket
+	memset
+sub_40A120
+	sub_40A3C0
+		gethostbyname
+		inet_addr
+		HeapFree
+		GetProcessHeap
+		HeapAlloc
+		GetProcAddress
+		LoadLibraryA
+		GetModuleHandleA
+		memset
+	sub_40A190
+		LoadLibraryA
+		lstrcpynA
+		memset
+		HeapAlloc
+		GetProcessHeap
+		GetProcAddress
+		GetModuleHandleA
+	memset
+sub_40A630
+	HeapFree
+	GetProcessHeap
+	memset
+sub_40A6B0
+	sub_40AC70
+		lstrcmpiA
+		CharLowerA
+		lstrlenA
+		memset
+	sub_40BCB0
+		RegCloseKey
+		sub_40B180
+			sub_40AC70
+				lstrcmpiA
+				CharLowerA
+				lstrlenA
+				memset
+			closesocket
+			sub_40B8F0
+				sub_40BAC0
+					recv
+					memset
+				send
+				lstrlenA
+				memset
+			send
+			sub_40B7A0
+				memset
+			connect
+			socket
+			lstrcpyA
+			memset
+		sub_40ABB0
+			gethostbyname
+			inet_addr
+			memset
+		RegQueryValueExA
+		memset
+		RegOpenKeyExA
+		RegEnumKeyA
+	sub_40B180
+		sub_40AC70
+			lstrcmpiA
+			CharLowerA
+			lstrlenA
+			memset
+		closesocket
+		sub_40B8F0
+			sub_40BAC0
+				recv
+				memset
+			send
+			lstrlenA
+			memset
+		send
+		sub_40B7A0
+			memset
+		connect
+		socket
+		lstrcpyA
+		memset
+	sub_40ABB0
+		gethostbyname
+		inet_addr
+		memset
+	lstrcpyA
+	memset
+sub_40BF50
+sub_40C1D0
+	CloseHandle
+	WriteFile
+	lstrlenA
+	ReadFile
+	SetFilePointer
+	GetFileSize
+	sub_40C850
+		SetFilePointer
+		ReadFile
+		memset
+	sub_40C700
+		GetSystemTime
+		memset
+	memset
+	CreateFileA
+sub_410D30
+	memset

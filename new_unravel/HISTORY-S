@@ -1,0 +1,9 @@
+Link & Slice  Fri Mar  2 19:54:57 2012
+
+example.c already linked
+unravel version 2.2+
+In function read_k_file:
+ k_file_name = example.K
+slice on a (in func1) at line 8 in example.c (3 stmts in 0:1)
+slice on a (in func1) at line 2 in example.c (9 stmts in 0:1)
+slice on a (in func1) at line 6 in example.c (3 stmts in 0:1)

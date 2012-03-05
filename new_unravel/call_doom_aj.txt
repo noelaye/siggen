@@ -1,0 +1,174 @@
+In function read_k_file:
+ k_file_name = mydoom_aj.K
+send
+URLDownloadToFileA
+ExitThread
+CreateThread
+fopen
+fgets
+strstr
+fclose
+GetEnvironmentVariableA
+GetWindowsDirectoryA
+lstrcpynA
+CharLowerA
+lstrcmpA
+GetFileSize
+CreateFileMappingA
+MapViewOfFile
+UnmapViewOfFile
+GetDriveTypeA
+GetCurrentThread
+SetThreadPriority
+RegQueryValueExA
+GetProcessHeap
+HeapAlloc
+socket
+recv
+HeapFree
+closesocket
+sendto
+inet_addr
+lstrcmpiA
+GlobalFree
+InterlockedIncrement
+InterlockedDecrement
+SetFilePointer
+ReadFile
+GetSystemTime
+GlobalAlloc
+GetTempFileNameA
+FindNextFileA
+FindFirstFileA
+FindClose
+connect
+RegEnumKeyA
+FileTimeToLocalFileTime
+FileTimeToSystemTime
+GetLocalTime
+GetTimeZoneInformation
+WideCharToMultiByte
+main
+	ExitProcess
+	sub_4A355B
+		sub_4A2E63
+			GetLastError
+			CreateMutexA
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+		Sleep
+		sub_4A3730
+			GetProcAddress
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+			LoadLibraryA
+			GetModuleHandleA
+		sub_4A3488
+			RegCreateKeyExA
+			RegCloseKey
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+			sub_4A3730
+				GetProcAddress
+				sub_4A36E7
+					sub_4A366C
+						sub_4A370E
+						memcpy
+				LoadLibraryA
+				GetModuleHandleA
+		sub_4A3428
+			gethostbyname
+		sub_4A315C
+			RegOpenKeyExA
+			RegCloseKey
+			RegDeleteValueA
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+		sub_4A2FEB
+			RegOpenKeyExA
+			RegCloseKey
+			RegSetValueExA
+			lstrlenA
+			lstrcatA
+			GetSystemDirectoryA
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+		sub_4A2E99
+			lstrcpyA
+			CopyFileA
+			DeleteFileA
+			CloseHandle
+			GetFileAttributesA
+			CreateFileA
+			SetFileAttributesA
+			lstrcatA
+			lstrlenA
+			GetSystemDirectoryA
+			GetTempPathA
+			GetModuleFileNameA
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+		ShellExecuteA
+		sub_4A2C12
+			sub_4A39A2
+				sub_4A37D0
+					CloseHandle
+					sub_4A37A6
+						GetLastError
+					GetProcAddress
+					GetModuleHandleA
+				sub_4A38D6
+					CloseHandle
+					sub_4A39E6
+						tolower
+					sub_4A37A6
+						GetLastError
+			lstrcpyA
+			CloseHandle
+			sub_4A2B90
+				WriteFile
+			GetFileAttributesA
+			CreateFileA
+			lstrcatA
+			lstrlenA
+			GetSystemDirectoryA
+			GetTempPathA
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+		sub_4A2DF7
+			RegCloseKey
+			RegOpenKeyExA
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+		sub_4A2D44
+			RegCloseKey
+			RegCreateKeyExA
+			RegOpenKeyExA
+			sub_4A36E7
+				sub_4A366C
+					sub_4A370E
+					memcpy
+		GetTickCount
+	memset
+sub_4A3A84
+	WriteFile
+	sub_4A3A23
+sub_4A4004
+	memcpy
+	lstrlenA

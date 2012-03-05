@@ -1,0 +1,15 @@
+Steps -
+
+a) perl automate.pl <filename> , here filename is the one u want to analyze.
+
+Before running automate.pl, you need to add the following format in slice.txt as well as in slice1.txt
+
+filename lineno procedurename'variable   (Format). For example you can check the file silce and slice1.txt
+
+b) Run this program and the output is stored in signature_final.txt. Before running automate.pl, make sure u delete all the  contents from signature_final.txt
+
+c) Now, we run merge.pl. 
+
+perl merge.pl filename signature_final.txt
+
+The output is stored in slice_filename.c
